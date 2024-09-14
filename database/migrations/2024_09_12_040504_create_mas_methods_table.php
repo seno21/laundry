@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mas_diskons', function (Blueprint $table) {
+        Schema::create('mas_methods', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('nama_diskon');
-            $table->integer('harga_diskon');
+            $table->string('method_name');
             $table->boolean('active');
             $table->timestamps();
         });
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mas_diskons');
+        Schema::dropIfExists('mas_methods');
     }
 };

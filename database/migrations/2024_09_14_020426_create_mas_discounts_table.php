@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mas_waktuses', function (Blueprint $table) {
+        Schema::create('mas_discounts', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('waktu');
-            $table->boolean('active');
+            $table->string('discount_name');
+            $table->integer('discount_price');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mas_waktuses');
+        Schema::dropIfExists('mas_discounts');
     }
 };

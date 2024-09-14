@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('outlets', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('nama_outlet');
-            $table->text('alamat');
-            $table->string('telepon_pic');
-            $table->string('telepon_cs');
-            $table->time('jam_buka');
-            $table->time('jam_tutup');
-            $table->string('foto');
-            $table->string('lokasi');
+            $table->string('outlet_name');
+            $table->text('address');
+            $table->string('phone_pic');
+            $table->string('phone_cs');
+            $table->time('opening_hours');
+            $table->time('closing_hours');
+            $table->string('photo');
+            $table->string('location');
             $table->boolean('active');
             $table->timestamps();
         });

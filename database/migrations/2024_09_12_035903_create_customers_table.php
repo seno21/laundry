@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('id_outlet');
-            $table->string('nama');
+            $table->string('name');
             $table->string('email');
-            $table->string('telepon');
+            $table->string('phone');
             $table->boolean('active');
             $table->timestamps();
         });

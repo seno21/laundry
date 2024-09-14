@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->uuid('id_outlet');
-            $table->uuid('id_kategori');
-            $table->uuid('id_metode');
-            $table->uuid('id_waktu');
-            $table->string('nama_item');
-            $table->integer('harga');
+            $table->uuid('outlet_id');
+            $table->uuid('category_id');
+            $table->uuid('method_id');
+            $table->uuid('time_id');
+            $table->string('item_name');
+            $table->integer('price');
             $table->boolean('active');
             $table->timestamps();
         });

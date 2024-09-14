@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('mas_levels', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('nama_level');
+            $table->string('level_name');
             $table->boolean('active');
             $table->timestamps();
         });
